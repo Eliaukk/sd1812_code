@@ -1,0 +1,17 @@
+{
+    "tc_flag": "yes",
+    "resCode": "sellOut",
+    "tc_info": {
+        "defaultName": "100MB流量",
+        "pId": "ms1",
+        "transferList": [
+            {
+                "tId": "ll2",
+                "img": "https://m.sd.10086.cn/act_service/resources/1727/images/t_500mdhq.png",
+                "needNum": 1
+            }
+        ],
+        "thisName": "2元话费加赠券"
+    },
+    "msg": "您选择的这张卡券已抢光"
+}

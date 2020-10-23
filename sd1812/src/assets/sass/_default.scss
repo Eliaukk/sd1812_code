@@ -1,0 +1,182 @@
+/*默认样式方法*/
+$divBgF5: #f5f5f5;
+$divBgFF: #ffffff;
+$colorE5: #e5e5e5;
+$color23: #232323;
+$size24: .32rem;
+$size20: .266rem;
+$size32: .426rem;
+$size36: .48rem;
+$size28: .373rem;
+$size48: .64rem;
+ /*组织手机长按复制*/
+ *:not(input, textarea) {-webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  -o-user-select:none;}
+ul li{ list-style: none}
+i,em{font-style: normal}
+img{pointer-events: none}
+textarea{
+  resize:none;
+}
+.fl{
+  float:left;
+}
+.fr{
+  float: right;
+}
+section .overflowBox{height: 100%; overflow: hidden;}
+
+/*重置alertpop.min.css 样式*/
+.scheduleWrap {
+  dt{
+    font-size: .38rem; 
+  }
+  }
+  .hint{z-index: 1000;padding-top: 8.427rem;}
+%img {
+  display: block;
+  height: 100%;
+}
+/* w,h,m, 元素 基本值*/
+@mixin whmg($block,$w,$h,$mid) {
+  @if $block { display:$block };
+  @if $w { width: $w };
+  @if $h { height: $h };
+  @if $mid { margin: $mid };
+}
+/*font 基本值*/ 
+@mixin fontSet($size, $color, $lineH, $mid){
+  @if $size {font-size: $size};
+  @if $color {color: $color}
+  @if $lineH {line-height: $lineH};
+  @if $mid {text-align: $mid};
+}
+/*垂直居中*/
+@mixin verticalCentent($top,$left,$X,$Y) {
+  position: absolute;
+  @if $left { left:$left };
+  @if $top { top:$top };
+  -webkit-transform: translate($X,$Y);
+  -moz-transform: translate($X,$Y);
+  -ms-transform: translate($X,$Y);
+  -o-transform: translate($X,$Y);
+  transform: translate($X,$Y);
+}
+/*圆角*/
+@mixin rds($n) {
+  border-radius:$n;
+}
+/*超出点点*/
+@mixin overflowTxt($n) {
+  width: $n;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* 缩放动画*/
+@mixin scaleCs{
+  animation:scaleCs3 1.5s .5s ease both infinite;
+  -webkit-animation:scaleCs3 1.5s .5s ease both infinite;
+}
+
+@mixin scaleCs3{
+  @-webkit-keyframes  scaleCs3{
+    50%{
+      -webkit-transform:scale(.8);
+      transform:scale(.8);
+    }
+    100%{
+      -webkit-transform:scale(1);
+      transform:scale(1);
+    }
+  }
+  @keyframes  scaleCs3{
+    50%{
+      -webkit-transform:scale(.8);
+      transform:scale(.8);
+    }
+    100%{
+      -webkit-transform:scale(1);
+      transform:scale(1);
+    }
+  }
+}
+
+.shake {
+    -webkit-animation-name: shake;
+    animation-name: shake;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+/**抖动动画**/
+@-webkit-keyframes shake {
+    0%,to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+
+    10%,30%,50%,70%,90% {
+        -webkit-transform: translate3d(-10px,0,0);
+        transform: translate3d(-10px,0,0)
+    }
+
+    20%,40%,60%,80% {
+        -webkit-transform: translate3d(10px,0,0);
+        transform: translate3d(10px,0,0)
+    }
+}
+
+@keyframes shake {
+    0%,to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+
+    10%,30%,50%,70%,90% {
+        -webkit-transform: translate3d(-10px,0,0);
+        transform: translate3d(-10px,0,0)
+    }
+
+    20%,40%,60%,80% {
+        -webkit-transform: translate3d(10px,0,0);
+        transform: translate3d(10px,0,0)
+    }
+}
+
+/* 初始化过渡动画 */
+.positive{
+    -webkit-animation: animate-positive 1s;
+    animation: animate-positive 2s;
+}
+@-webkit-keyframes animate-positive{
+
+    0% { width: 0; }
+    
+}
+    
+@keyframes animate-positive{
+
+    0% { width: 0; }
+
+}
+
+/*弹窗盒子*/
+@mixin altBox($bgColor){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @if $bgColor { background-color:$bgColor};
+  z-index: 1000;
+  overflow: hidden;
+}

@@ -1,0 +1,22 @@
+{
+    "tc_flag": "yes",
+    "resCode": "sell_out",
+    "tc_info": {
+        "defaultName": "100MB流量",
+        "pId": "ms1",
+        "transferList": [
+            {
+                "tId": "hf3",
+                "img": "https://m.sd.10086.cn/act_service/resources/1727/images/t_2yjzq.png",
+                "needNum": 1
+            },
+            {
+                "tId": "ll2",
+                "img": "https://m.sd.10086.cn/act_service/resources/1727/images/t_500mdhq.png",
+                "needNum": 1
+            }
+        ],
+        "thisName": "2GB流量兑换券"
+    },
+    "msg": "此卡券已抢光"
+}
